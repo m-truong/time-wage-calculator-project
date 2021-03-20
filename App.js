@@ -14,8 +14,10 @@ import { View, Text } from 'react-native';
 
 const App = () => {
   return (
-    <View> 
-      
+    <View>
+      <Text>
+        WHAT UP DOG
+      </Text>
     </View>
   )
 }

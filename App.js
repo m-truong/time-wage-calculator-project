@@ -9,14 +9,14 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text } from 'react-native';
 
-// Note: In React-Native, MUST incase everything in a native <View> component containers 
+// Note: In React-Native, must incase everything in a native <View> component containers 
 
 
 const App = () => {
   return (
     <View>
       <Text>
-        WHAT UP DOG
+        Hello World
       </Text>
     </View>
   )

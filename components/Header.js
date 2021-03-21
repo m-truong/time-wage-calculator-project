@@ -27,7 +27,7 @@ const Header = ({ title }) => {
 
 // Tip: Assign defaultProps to <Header> component 
 // If no props passed down, from topmost component, all {attributes} default 
-    // to values on this object
+// to values on this object
 Header.defaultProps = {
     title: 'Default Title'
 }

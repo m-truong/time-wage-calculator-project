@@ -7,10 +7,9 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { View, Text, Image, StyleSheet, FlatList } from 'react-native';
+import { View, Text, Image, StyleSheet, FlatList, Alert } from 'react-native';
 import Header from './components/Header';
-import ListItem from './components/ListItem';
-// import { uuid } from 'uuidv4';
+
 
 // Note: Functions just like React 'Styled-Components'
 const styles = StyleSheet.create({
@@ -37,24 +36,22 @@ const styles = StyleSheet.create({
 // Note: In React-Native, must incase everything in a native <View> component containers 
 
 const App = () => {
-  const [items, setItems] = useState([
-    { id: Math.random(), text: 'Milk' },
-    { id: Math.random(), text: 'Coffee' },
-    { id: Math.random(), text: 'Bagel' },
-    { id: Math.random(), text: 'Bread' },
-  ])
+
+
+  const deleteItemHandler = (id) => {
+
+  }
+
+  const addItemHandler = (text) => {
+
+  }
 
   return (
     <View style={styles.container}>
       {/* Note: Using 'props' to pass-down values makes components very reusable and modular. */}
       <Header title={"Time-2-Wage Calculator"} />
-      <FlatList
-        // Tip: hard-coded 'data' array property on <FlatList> component
-        data={items}
-        // Tip: renderItem hard-coded function 
-        renderItem={({ item }) => <ListItem item={item}/>}
-      />
-      <Image source={{ uri: 'https://www.randomuser.me/api/portraits/men/3.jpg' }} style={styles.img} />
+
+      <Image source={{ uri: 'https://www.randomuser.me/api/portraits/men/30.jpg' }} style={styles.img} />
     </View>
   )
 }

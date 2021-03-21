@@ -10,7 +10,6 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, Image, StyleSheet, FlatList, Alert } from 'react-native';
 import Header from './components/Header';
 
-
 // Note: Functions just like React 'Styled-Components'
 const styles = StyleSheet.create({
   container: {

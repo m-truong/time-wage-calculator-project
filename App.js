@@ -1,9 +1,10 @@
 import 'react-native-gesture-handler'
 import React, { useState, useEffect } from 'react';
-import { View, Text, Image, StyleSheet, FlatList, Alert } from 'react-native';
+import { View, Text, Button, Image, StyleSheet, FlatList, Alert } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { WelcomeScreen } from './screens/WelcomeScreen';
+// Tip: If using 'export default' don't destructure import. 
+import WelcomeScreen from './screens/WelcomeScreen';
 import Header from './components/Header';
 
 // Creates Stack
@@ -31,9 +32,9 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="Home"
+          name="WelcomeScreen"
           component={WelcomeScreen}
-          options={{ title: 'Welcome' }} />
+          options={{ title: 'Time To Wage Calculator' }} />
       </Stack.Navigator>
     </NavigationContainer>
     // <Stack.Screen name="Profile" component={ProfileScreen} />

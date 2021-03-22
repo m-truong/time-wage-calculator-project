@@ -76,7 +76,7 @@ This mobile application is a "time-wage calculator" for determining how much tim
 
 ### Technologies used:
 Decimal to time calculator https://www.calculatorsoup.com/calculators/time/decimal-to-time-calculator.php 
-
+1. React Native Navigator (https://reactnavigation.org/docs/navigating)
 
 ---
 
@@ -104,9 +104,10 @@ Decimal to time calculator https://www.calculatorsoup.com/calculators/time/decim
 #### List of Errors.....
 
 **ERROR**:
-
+1. error Failed to build iOS project. “xcodebuild” command error code 65
 
 **RESOLUTION**:
+1. It was caused by installing react-native-vector-icons and linking by running the react-native link react-native-vector-icons command. I had to unlink react-native vector-icons to successfully build the iOS app.
 
 ---
 

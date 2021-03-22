@@ -2,8 +2,9 @@ import 'react-native-gesture-handler'
 import React, { useState, useEffect } from 'react';
 import { View, Text, Image, StyleSheet, FlatList, Alert } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import Header from './components/Header';
+import { createStackNavigator } from '@react-navigation/stack';
 import { WelcomeScreen } from './screens/WelcomeScreen';
+import Header from './components/Header';
 
 // Creates Stack
 const Stack = createStackNavigator();
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
 })
 
 const App = () => {
-  
+
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -35,6 +36,7 @@ const App = () => {
           options={{ title: 'Welcome' }} />
       </Stack.Navigator>
     </NavigationContainer>
+    // <Stack.Screen name="Profile" component={ProfileScreen} />
   )
 }
 

@@ -12,7 +12,6 @@ target 'time_wage_calculator_project' do
     :hermes_enabled => false
   )
 
-  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
   target 'time_wage_calculator_projectTests' do
     inherit! :complete

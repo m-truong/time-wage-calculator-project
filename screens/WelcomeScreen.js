@@ -55,7 +55,8 @@ const WelcomeScreen = ({ navigation }) => {
             />
             <MyButton
                 text={"Continue"}
-                navigation={navigation} />
+                navigation={navigation} 
+                screen={"InfoScreen"}/>
         </View>
     )
 }

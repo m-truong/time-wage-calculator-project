@@ -18,10 +18,10 @@ const styles = StyleSheet.create({
     }
 })
 
-const MyButton = ({ text, navigation }) => {
+const MyButton = ({ text, navigation, screen }) => {
     return (
         // Note: ** Change this button prop to be **modular** and reusable for <MyButton> component
-        <TouchableOpacity style={styles.btn} onPress={() => { navigation.navigate('InfoScreen') }}>
+        <TouchableOpacity style={styles.btn} onPress={() => { navigation.navigate(screen) }}>
             <Text style={styles.btnText}>
                 {text}
             </Text>

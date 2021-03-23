@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 // Tip: If using 'export default' don't destructure import. 
 import WelcomeScreen from './screens/WelcomeScreen';
 import InfoScreen from './screens/InfoScreen';
+import MainScreen from './screens/MainScreen';
 // import Header from './components/Header';
 
 // Creates Stack
@@ -35,11 +36,16 @@ const App = () => {
         <Stack.Screen
           name="WelcomeScreen"
           component={WelcomeScreen}
-          options={{ title: 'Time To Wage Calculator' }} />
+          options={{ title: 'Time Wage Calculator - Welcome Screen' }} />
         <Stack.Screen
           name="InfoScreen"
           component={InfoScreen}
           options={{ title: 'Info Screen' }}
+        />
+        <Stack.Screen
+          name="MainScreen"
+          component={MainScreen}
+          options={{ title: 'Main Screen' }}
         />
       </Stack.Navigator>
     </NavigationContainer>

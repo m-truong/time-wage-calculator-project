@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 19,
-        fontFamily:'Helvetica'
+        fontFamily: 'Helvetica'
     }
 })
 
@@ -29,13 +29,17 @@ const InfoScreen = ({ navigation }) => {
             <Image
                 source={require('../res/images/infographicImage.png')}
             />
-            <Text style={styles.text}>Try this experiment with other expenses.</Text>
+            <Text style={styles.text}>
+                Try this experiment with other expenses.
+                </Text>
             <Image
                 source={require('../res/images/incomeInequalityImage.png')}
             />
             <MyButton
                 text={"Start"}
-                navigation={navigation} />
+                navigation={navigation}
+                screen={"MainScreen"}
+            />
         </View>
     )
 }

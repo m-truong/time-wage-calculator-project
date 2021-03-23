@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, Image, StyleSheet } from 'react-native';
 import MyButton from '../components/MyButton';
 import PageLink from '../components/PageLink'
-import Bubble from '../components/Bubble'
+import WelcomeScreenBubble from '../components/WelcomeScreenBubble'
 import BubbleStyles from '../utilities/BubbleStyles'
 import { text } from '../utilities/Text'
 
@@ -34,19 +34,19 @@ const WelcomeScreen = ({ navigation }) => {
                 // Note: Must pass down {navigation} as a prop to the <TouchableOpacity> component to change screens
                 navigation={navigation}
             />
-            <Bubble
+            <WelcomeScreenBubble
                 text={text.text1}
                 background={BubbleStyles.background1}
                 textStyle={BubbleStyles.text} />
-            <Bubble
+            <WelcomeScreenBubble
                 text={text.text2}
                 background={BubbleStyles.background2}
                 textStyle={BubbleStyles.text} />
-            <Bubble
+            <WelcomeScreenBubble
                 text={text.text3}
                 background={BubbleStyles.background1}
                 textStyle={BubbleStyles.text} />
-            <Bubble
+            <WelcomeScreenBubble
                 text={text.text4}
                 background={BubbleStyles.background2}
                 textStyle={BubbleStyles.text} />

@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
 
 
-const Bubble = ({ text, textStyle, background}) => {
+const WelcomeScreenBubble = ({ text, textStyle, background}) => {
     return (
         <View style={background}>
             <Text style={textStyle}>{text}</Text>
@@ -10,8 +10,8 @@ const Bubble = ({ text, textStyle, background}) => {
     )
 }
 
-Bubble.defaultProps = {
+WelcomeScreenBubble.defaultProps = {
 
 }
 
-export default Bubble;
+export default WelcomeScreenBubble;

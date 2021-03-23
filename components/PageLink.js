@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
+import { View, Text, Button, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
 
 const styles = StyleSheet.create({
     text: {
@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
         fontSize: 17,
         fontFamily: 'Helvetica',
         textDecorationLine: "underline",
+        marginLeft: 290,
     },
     position: {
         // flex: 1,
@@ -17,10 +18,11 @@ const styles = StyleSheet.create({
     }
 })
 
-const PageLink = ({text}) => {
+// Must pass down as props
+const PageLink = ({text, navigation}) => {
     return (
         <View>
-            <TouchableOpacity style={styles.position}>
+            <TouchableOpacity style={styles.position} >
                 <Text style={styles.text}>
                     {text}
                 </Text>

@@ -7,11 +7,13 @@ import BubbleStyles from '../utilities/BubbleStyles'
 import { text } from '../utilities/Text'
 
 const styles = StyleSheet.create({
+    // Tip: Essentially flexbox 'Bootstrap' properties
     container: {
-        // flex: 1,
+        flex: 1,
         // paddingTop: 60,
-        // justifyContent: 'center',
-        // alignItems: 'center'
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        margin: 10
     },
     text: {
         color: 'black',
@@ -28,7 +30,8 @@ const WelcomeScreen = ({ navigation }) => {
         <View style={styles.container}>
             <PageLink
                 text={"Skip Intro"}
-            // Add onPress={() => navigation.navigate('Profile', { name: 'Jane' })
+                // Note: Must pass down {navigation} as a prop to the <TouchableOpacity> component to change screens
+                navigation={navigation}
             />
             <Bubble
                 text={text.text1}
@@ -49,7 +52,9 @@ const WelcomeScreen = ({ navigation }) => {
             <Image
                 source={require('../res/images/incomeInequalityImage.png')}
             />
-            <Button text={"Continue"} />
+            <Button
+                text={"Continue"}
+                navigation={navigation} />
         </View>
     )
 }

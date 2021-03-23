@@ -11,15 +11,16 @@ const styles = StyleSheet.create({
         borderRadius: 12
     },
     btnText: {
+        fontFamily: 'Helvetica',
         color: '#ffffff',
         fontSize: 19,
         textAlign: 'center',
     }
 })
 
-const Button = ({ text, navigation }) => {
+const MyButton = ({ text, navigation }) => {
     return (
-        // Note: ** Change this button prop to be **modular** and reusable for <Button> component
+        // Note: ** Change this button prop to be **modular** and reusable for <MyButton> component
         <TouchableOpacity style={styles.btn} onPress={() => { navigation.navigate('InfoScreen') }}>
             <Text style={styles.btnText}>
                 {text}
@@ -28,9 +29,9 @@ const Button = ({ text, navigation }) => {
     )
 }
 
-Button.defaultProps = {
+MyButton.defaultProps = {
 
 }
 
 
-export default Button;
+export default MyButton;

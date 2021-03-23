@@ -1,5 +1,6 @@
 import React from 'react'
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import PageLink from '../components/PageLink'
 
 const styles = StyleSheet.create({
     container: {
@@ -20,10 +21,13 @@ const styles = StyleSheet.create({
     }
 })
 
-const MainScreen = ({ navigation }) => {
+const MainScreen = ({ navigation, screen }) => {
     return (
         <View style={styles.container}>
-            <Text>Main Screen</Text>
+            <TouchableOpacity>
+                <Image source={require('../res/images/informationCircle.png')} />
+            </TouchableOpacity>
+            {/* Continue Here:::! */}
         </View>
     )
 }

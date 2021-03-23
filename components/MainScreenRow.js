@@ -1,5 +1,7 @@
 import React from 'react'
 import { View, Text, Image, StyleSheet } from 'react-native';
+import MainScreenInputField from './MainScreenInputField'
+import MainScreenLabel from './MainScreenLabel'
 
 const styles = StyleSheet.create({
     container: {
@@ -11,22 +13,24 @@ const styles = StyleSheet.create({
         margin: 10,
     },
     text: {
-        fontFamily: 'Helvetica',
         color: 'black',
-        fontSize: 19,
+        fontSize: 30,
     },
 })
 
-const MainScreenLabel = ({text}) => {
+const MainScreenRow = ({ text }) => {
     return (
         <View>
-            <Text style={styles.text}>{text}</Text>
+            {/* <Text> */}
+                <MainScreenLabel text={text} />
+                <MainScreenInputField />
+            {/* </Text> */}
         </View>
     )
 }
 
-MainScreenLabel.defaultProps = {
+MainScreenRow.defaultProps = {
 
 }
 
-export default MainScreenLabel;
+export default MainScreenRow;

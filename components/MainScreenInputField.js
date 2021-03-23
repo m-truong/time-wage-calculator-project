@@ -1,14 +1,13 @@
 import React from 'react'
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        // paddingTop: 60,
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        margin: 10,
+        backgroundColor: '#E2CFE9',
+        padding: 10,
+        // justifyContent: 'space-between',
+        textAlign: 'center',
+        // margin: 10,
     },
     text: {
         color: 'black',
@@ -18,9 +17,10 @@ const styles = StyleSheet.create({
 
 const MainScreenInputField = () => {
     return (
-        <View>
-            
-        </View>
+        // <Text>$ </Text>
+        <TouchableOpacity style={styles.container}>
+           <TextInput />
+        </TouchableOpacity>
     )
 }
 

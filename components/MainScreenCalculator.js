@@ -3,12 +3,14 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        // paddingTop: 60,
+        // flex: 1,
+        backgroundColor: '#C8F0CD',
+        padding: 20,
+        width: 320,
+        height: 125,
         justifyContent: 'space-between',
         alignItems: 'center',
-        margin: 10,
+        margin: 5,
     },
     text: {
         color: 'black',
@@ -16,10 +18,10 @@ const styles = StyleSheet.create({
     },
 })
 
-const MainScreenCalculator = () => {
+const MainScreenCalculator = ({ data }) => {
     return (
-        <View>
-            
+        <View style={styles.container}>
+
         </View>
     )
 }

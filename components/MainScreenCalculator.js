@@ -8,28 +8,47 @@ const styles = StyleSheet.create({
         width: 320,
         height: 125,
         textAlign: 'center',
-        // marginLeft: 5,
-        // paddingLeft: 5,
         // Tip: Don't need flex to justifyContent**
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignItems: 'center',
+    },
+    nested: {
+        alignItems: 'center',
+        justifyContent: 'space-between',
     },
     text: {
         color: 'black',
         fontSize: 38,
         fontFamily: 'Courier New',
     },
+    label: {
+        color: 'black',
+        fontSize: 19,
+        fontFamily: 'Courier New',
+        
+    }
 })
 
 const MainScreenCalculator = ({ hour, min, sec }) => {
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>{hour}</Text>
+            <View style={styles.nested}>
+                <Text style={styles.text}>{hour}</Text>
+                <Text style={styles.label}>HOURS</Text>
+            </View>
             <Text style={styles.text}>:</Text>
-            <Text style={styles.text}>{min}</Text>
+            <View style={styles.nested}>
+                <Text style={styles.text}>{min}</Text>
+                <Text style={styles.label}>MIN</Text>
+            </View>
+
             <Text style={styles.text}>:</Text>
-            <Text style={styles.text}>{sec}</Text>
+            <View style={styles.nested}>
+                <Text style={styles.text}>{sec}</Text>
+                <Text style={styles.label}>SEC</Text>
+            </View>
+
         </View>
     )
 }

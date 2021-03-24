@@ -4,15 +4,22 @@ import { View, Text, Image, StyleSheet, TextInput, TouchableOpacity } from 'reac
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#E2CFE9',
-        textAlign: 'center',
         // marginLeft: 10,
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingHorizontal: 5,
+        textAlign: 'center',
         width: 120,
-        height: 40,
+        // height: 20,
     },
     text: {
-        fontSize: 20,
+        width: '100%',
+        borderWidth: 1,
+        borderColor: 'rgba(0,0,0,0.5)',
         color: 'black',
         fontFamily: 'Courier New',
+        fontSize: 20,
     },
 })
 

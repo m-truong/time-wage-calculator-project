@@ -33,15 +33,15 @@ const MainScreen = ({ navigation, screen }) => {
             <TouchableOpacity>
                 <Image source={require('../res/images/informationCircle.png')} />
             </TouchableOpacity>
-            <MainScreenRow text={"Hourly Wage"}>
+            <MainScreenRow text={"Hourly Wage"} width={20}>
                 {/* <MainScreenLabel />
                 <MainScreenInputField /> */}
             </MainScreenRow>
-            <MainScreenRow text={"Price of Expense"}>
+            <MainScreenRow text={"Price of Expense"} width={20}>
                 {/* <MainScreenLabel />
                 <MainScreenInputField /> */}
             </MainScreenRow>
-            <MainScreenRow text={"Label"}>
+            <MainScreenRow text={"Label"} width={20}>
                 {/* <MainScreenLabel />
                 <MainScreenInputField /> */}
             </MainScreenRow>

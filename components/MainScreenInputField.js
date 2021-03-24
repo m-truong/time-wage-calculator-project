@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
         // justifyContent: 'space-between',
         textAlign: 'center',
         // margin: 10,
+        // width: 100,
     },
     text: {
         color: 'black',
@@ -15,11 +16,12 @@ const styles = StyleSheet.create({
     },
 })
 
-const MainScreenInputField = () => {
+const MainScreenInputField = ({ width }) => {
     return (
         // <Text>$ </Text>
+        // Continue here~!!! Get It To Display Inline!!!!
         <TouchableOpacity style={styles.container}>
-           <TextInput />
+            <TextInput />
         </TouchableOpacity>
     )
 }

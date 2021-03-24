@@ -18,12 +18,12 @@ const styles = StyleSheet.create({
     },
 })
 
-const MainScreenRow = ({ text }) => {
+const MainScreenRow = ({ text, width }) => {
     return (
         <View>
             {/* <Text> */}
                 <MainScreenLabel text={text} />
-                <MainScreenInputField />
+                <MainScreenInputField width={width}/>
             {/* </Text> */}
         </View>
     )

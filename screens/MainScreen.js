@@ -12,9 +12,9 @@ const styles = StyleSheet.create({
         flex: 1,
         margin: 10,
         backgroundColor: '#fff',
-        // paddingTop: 60,
         justifyContent: 'space-between',
         alignItems: 'center',
+        marginBottom: 40,
     },
     text: {
         color: 'black',
@@ -41,7 +41,9 @@ const MainScreen = ({ navigation, screen }) => {
             <MainScreenRow text={"Label"} width={20} />
             {/* Add diff Button component with onPress to pass down data; not navigate */}
             <MyButton text={"Calculate"} />
+            <Text>Label costs</Text>
             <MainScreenCalculator />
+            <Text>of your life to earn.</Text>
             <Image
                 source={require('../res/images/calculatingImage.png')}
             />

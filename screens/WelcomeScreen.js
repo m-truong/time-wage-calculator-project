@@ -10,11 +10,13 @@ const styles = StyleSheet.create({
     // Tip: Essentially flexbox 'Bootstrap' properties
     container: {
         flex: 1,
-        // paddingTop: 60,
         justifyContent: 'space-between',
         alignItems: 'center',
+        backgroundColor: '#fff',
         margin: 10,
-        backgroundColor: '#fff'
+        // borderColor: '#fff',
+        // borderWidth: 10,
+        marginBottom: 40,
     },
     text: {
         color: 'black',

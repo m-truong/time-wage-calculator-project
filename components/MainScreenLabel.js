@@ -3,25 +3,22 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        // paddingTop: 60,
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        margin: 10,
     },
     text: {
+        // marginRight: 10,
+        // textAlign: 'left',
         fontFamily: 'Helvetica',
         color: 'black',
         fontSize: 19,
+        paddingRight: 10,
     },
 })
 
-const MainScreenLabel = ({text}) => {
+const MainScreenLabel = ({ text }) => {
     return (
-        <View>
-            <Text style={styles.text}>{text}</Text>
-        </View>
+            <Text style={styles.text}>
+                {text}
+            </Text>
     )
 }
 

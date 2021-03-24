@@ -1,16 +1,17 @@
+/* TODO: Having issues adding spacing between <Label> and <InputField>! */
+
 import React from 'react'
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import MainScreenInputField from './MainScreenInputField'
 import MainScreenLabel from './MainScreenLabel'
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        // paddingTop: 60,
+        // margin: 10,
+        flex: 3,
+        flexDirection: "row", 
         justifyContent: 'space-between',
-        alignItems: 'center',
-        margin: 10,
+        padding: 10,
     },
     text: {
         color: 'black',
@@ -20,11 +21,13 @@ const styles = StyleSheet.create({
 
 const MainScreenRow = ({ text, width }) => {
     return (
-        <View>
-            {/* <Text> */}
+        // Tip: Both components need to be nested inside <Text> component to display inline
+        <View style={styles.container}>
+            {/* TODO: Having issues adding spacing between <Label> and <InputField>! */}
+            <Text>
                 <MainScreenLabel text={text} />
-                <MainScreenInputField width={width}/>
-            {/* </Text> */}
+                <MainScreenInputField width={width} />
+            </Text>
         </View>
     )
 }

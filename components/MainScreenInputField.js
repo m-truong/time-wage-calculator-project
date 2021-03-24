@@ -4,25 +4,27 @@ import { View, Text, Image, StyleSheet, TextInput, TouchableOpacity } from 'reac
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#E2CFE9',
-        padding: 10,
-        // justifyContent: 'space-between',
         textAlign: 'center',
-        // margin: 10,
-        // width: 100,
+        // marginLeft: 10,
+        width: 120,
+        height: 40,
     },
     text: {
+        fontSize: 20,
         color: 'black',
-        fontSize: 30,
+        fontFamily: 'Courier New',
     },
 })
 
 const MainScreenInputField = ({ width }) => {
     return (
-        // <Text>$ </Text>
-        // Continue here~!!! Get It To Display Inline!!!!
-        <TouchableOpacity style={styles.container}>
-            <TextInput />
-        </TouchableOpacity>
+        <View style={styles.container}>
+            <TextInput
+                style={styles.text}
+                // placeholder="0.00"
+                placeholderTextColor="black"
+            />
+        </View>
     )
 }
 

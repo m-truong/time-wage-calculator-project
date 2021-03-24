@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import React, { useState, useContext } from 'react'
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import MainScreenRow from '../components/MainScreenRow';
 import MainScreenLabel from '../components/MainScreenLabel';
@@ -27,24 +27,19 @@ const styles = StyleSheet.create({
 })
 
 const MainScreen = ({ navigation, screen }) => {
-    
+    const [hourlyWage, setHourlyWage] = useState([])
+    const [priceExpense, setPriceExpense] = useState([])
+    const [label, setLabel] = useState([])
+
     return (
         <View style={styles.container}>
             <TouchableOpacity>
                 <Image source={require('../res/images/informationCircle.png')} />
             </TouchableOpacity>
-            <MainScreenRow text={"Hourly Wage"} width={20}>
-                {/* <MainScreenLabel />
-                <MainScreenInputField /> */}
-            </MainScreenRow>
-            <MainScreenRow text={"Price of Expense"} width={20}>
-                {/* <MainScreenLabel />
-                <MainScreenInputField /> */}
-            </MainScreenRow>
-            <MainScreenRow text={"Label"} width={20}>
-                {/* <MainScreenLabel />
-                <MainScreenInputField /> */}
-            </MainScreenRow>
+            <MainScreenRow text={"Hourly Wage"} width={20} />
+            <MainScreenRow text={"Price of Expense"} width={20} />
+            <MainScreenRow text={"Label"} width={20} />
+            {/* Add diff Button component with onPress to pass down data; not navigate */}
             <MyButton text={"Calculate"} />
             <MainScreenCalculator />
             <Image

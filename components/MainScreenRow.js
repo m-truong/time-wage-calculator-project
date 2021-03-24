@@ -7,7 +7,6 @@ import MainScreenLabel from './MainScreenLabel'
 
 const styles = StyleSheet.create({
     container: {
-        // margin: 10,
         flex: 3,
         flexDirection: "row", 
         justifyContent: 'space-between',

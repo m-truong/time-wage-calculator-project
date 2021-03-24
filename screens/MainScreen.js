@@ -4,6 +4,7 @@ import MainScreenRow from '../components/MainScreenRow';
 import MainScreenLabel from '../components/MainScreenLabel';
 import MainScreenInputField from '../components/MainScreenInputField';
 import MainScreenCalculator from '../components/MainScreenCalculator';
+import CalculateButton from '../components/CalculateButton';
 import MyButton from '../components/MyButton';
 import PageLink from '../components/PageLink'
 
@@ -18,7 +19,9 @@ const styles = StyleSheet.create({
     },
     text: {
         color: 'black',
-        fontSize: 30,
+        fontSize: 19,
+        fontFamily: 'Helvetica',
+        marginVertical: 10,
     },
     img: {
         width: 100,
@@ -34,16 +37,27 @@ const MainScreen = ({ navigation, screen }) => {
     return (
         <View style={styles.container}>
             <TouchableOpacity>
-                <Image source={require('../res/images/informationCircle.png')} />
+                <Image
+                    style={{ marginLeft: 330 }}
+                    source={require('../res/images/informationCircle.png')} />
             </TouchableOpacity>
             <MainScreenRow text={"Hourly Wage"} width={20} />
             <MainScreenRow text={"Price of Expense"} width={20} />
             <MainScreenRow text={"Label"} width={20} />
             {/* Add diff Button component with onPress to pass down data; not navigate */}
-            <MyButton text={"Calculate"} />
-            <Text>Label costs</Text>
+            <CalculateButton text={"Calculate"} />
+            <Text
+                style={{ alignSelf: 'flex-end' }}
+            >
+                Clear
+                </Text>
+            <Text style={styles.text}>
+                Label costs
+            </Text>
             <MainScreenCalculator />
-            <Text>of your life to earn.</Text>
+            <Text style={styles.text}>
+                of your life to earn.
+                </Text>
             <Image
                 source={require('../res/images/calculatingImage.png')}
             />

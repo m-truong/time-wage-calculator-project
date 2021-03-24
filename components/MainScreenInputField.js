@@ -4,7 +4,6 @@ import { View, Text, Image, StyleSheet, TextInput, TouchableOpacity } from 'reac
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#E2CFE9',
-        // flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         paddingHorizontal: 5,
@@ -29,7 +28,7 @@ const MainScreenInputField = ({ width }) => {
         <View style={styles.container}>
             <TextInput
                 style={styles.text}
-                // placeholder="0.00"
+                placeholder="0.00"
                 placeholderTextColor="black"
             />
         </View>

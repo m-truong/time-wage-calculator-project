@@ -1,5 +1,6 @@
-import React from 'react'
-import { View, Text, Image, StyleSheet } from 'react-native';
+import React, { useContext } from 'react'
+import { CalculatorContext } from "./Context.js"
+import { View, Text, StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
     container: {
@@ -26,37 +27,44 @@ const styles = StyleSheet.create({
         color: 'black',
         fontSize: 19,
         fontFamily: 'Courier New',
-        
+
     }
 })
 
-const MainScreenCalculator = ({ hour, min, sec }) => {
+const MainScreenCalculator = () => {
+    // Peak into state to display 
+    const { calculatorState } = useContext(CalculatorContext)
+    const [calculator, setCalculator] = calculatorState
+    const { days, hours, mins, secs } = calculator
+    console.log(`Does this console.log ${days}`)
+    console.log(`Does this console.log ${hours}`)
+    console.log(`Does this console.log ${mins}`)
+    console.log(`Does this console.log ${secs}`)
+    // this is undefined 
     return (
         <View style={styles.container}>
             <View style={styles.nested}>
-                <Text style={styles.text}>{hour}</Text>
+                <Text style={styles.text}>{!days ? `00` : days}</Text>
+                <Text style={styles.label}>DAYS</Text>
+            </View>
+            <Text style={styles.text}>:</Text>
+            <View style={styles.nested}>
+                <Text style={styles.text}>{!hours ? `00` : hours}</Text>
                 <Text style={styles.label}>HOURS</Text>
             </View>
             <Text style={styles.text}>:</Text>
             <View style={styles.nested}>
-                <Text style={styles.text}>{min}</Text>
-                <Text style={styles.label}>MIN</Text>
+                <Text style={styles.text}>{!mins ? `00` : mins}</Text>
+                <Text style={styles.label}>MINS</Text>
             </View>
-
-            <Text style={styles.text}>:</Text>
-            <View style={styles.nested}>
-                <Text style={styles.text}>{sec}</Text>
-                <Text style={styles.label}>SEC</Text>
-            </View>
-
         </View>
     )
 }
 
 MainScreenCalculator.defaultProps = {
-    hour: `00`,
-    min: `00`,
-    sec: `00`,
+    one: `00`,
+    two: `00`,
+    three: `00`,
 }
 
 export default MainScreenCalculator;

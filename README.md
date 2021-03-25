@@ -105,9 +105,11 @@ Decimal to time calculator https://www.calculatorsoup.com/calculators/time/decim
 
 **ERROR**:
 1. error Failed to build iOS project. “xcodebuild” command error code 65
+2. Issues using the 'pod install' command in terminal.
 
 **RESOLUTION**:
 1. It was caused by installing react-native-vector-icons and linking by running the react-native link react-native-vector-icons command. I had to unlink react-native vector-icons to successfully build the iOS app.
+2. The solution was to install cocoapods in terminal useing the Homebrew package manager.
 
 ---
 

@@ -1,5 +1,6 @@
-import React from 'react'
-import { View, Text, Image, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import React, { useContext } from 'react'
+import { CalculatorContext } from "./Context.js";
+import { View, StyleSheet, TextInput } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
@@ -23,14 +24,19 @@ const styles = StyleSheet.create({
     },
 })
 
-const MainScreenInputField = ({ width }) => {
+const MainScreenInputField = ({ word, width }) => {
+    const [state, setState] = word;
+    // Debug:
+    console.log(`this console logs the ${state}`)
+
     return (
         <View style={styles.container}>
             <TextInput
                 style={styles.text}
                 placeholder="0.00"
-                placeholderTextColor="black"
-            />
+                placeholderTextColor="black" 
+                onChangeText={setState}
+            ></TextInput>
         </View>
     )
 }

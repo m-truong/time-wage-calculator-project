@@ -1,5 +1,6 @@
 import React from 'react'
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { CalculatorContext } from "./Context.js"
+import { Text, StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
     text: {

@@ -33,7 +33,7 @@ In today's society, many Americans earn minimum hourly wages and it’s so engra
 
 It also shows the privilege of people who earn higher wages in that it is worth such a small amount of time it’s almost negligible, like say someone who earns $13.4 million an hour (Jeff Bezos, Amazon CEO).
 
-This mobile application is a "time wage calculator" to help raise awareness for the **FightFor15** movement to **increase the federal minimum wage from $7.25/hr to $15.00/hr.** 
+This mobile application is a "time wage calculator" app to help raise awareness for the **FightFor15** movement to increase the federal minimum wage from $7.25/hr to $15.00/hr. 
 
 **Source**: (https://fightfor15.org/about-us/)
 

@@ -6,11 +6,11 @@ import PageLink from '../components/PageLink';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        // paddingTop: 60,
         justifyContent: 'space-between',
         alignItems: 'center',
         margin: 10,
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
+        marginBottom: 40,
     },
     text: {
         fontSize: 19,

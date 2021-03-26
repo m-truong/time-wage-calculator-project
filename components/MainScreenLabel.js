@@ -1,9 +1,26 @@
 import React from 'react'
+import { CalculatorContext } from "./Context.js"
+import { Text, StyleSheet } from 'react-native'
 
-export const MainScreenLabel = () => {
+const styles = StyleSheet.create({
+    text: {
+        fontFamily: 'Helvetica',
+        color: 'black',
+        fontSize: 19,
+        paddingRight: 10,
+    },
+})
+
+const MainScreenLabel = ({ text }) => {
     return (
-        <div>
-            
-        </div>
+            <Text style={styles.text}>
+                {text}
+            </Text>
     )
 }
+
+MainScreenLabel.defaultProps = {
+
+}
+
+export default MainScreenLabel;

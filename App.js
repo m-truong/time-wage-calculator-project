@@ -1,13 +1,12 @@
 import 'react-native-gesture-handler'
-import React, { useState, useEffect } from 'react';
-import { View, Text, Button, Image, StyleSheet, FlatList, Alert } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import React from 'react'
+import { StyleSheet, Alert } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
 // Tip: If using 'export default' don't destructure import. 
-import WelcomeScreen from './screens/WelcomeScreen';
-import InfoScreen from './screens/InfoScreen';
-import MainScreen from './screens/MainScreen';
-// import Header from './components/Header';
+import WelcomeScreen from './screens/WelcomeScreen'
+import InfoScreen from './screens/InfoScreen'
+import MainScreen from './screens/MainScreen'
 
 // Creates Stack
 const Stack = createStackNavigator();

@@ -41,6 +41,7 @@ const MainScreenCalculator = () => {
     console.log(`Does this console.log ${mins}`)
     console.log(`Does this console.log ${secs}`)
     // this is undefined 
+    
     return (
         <View style={styles.container}>
             <View style={styles.nested}>

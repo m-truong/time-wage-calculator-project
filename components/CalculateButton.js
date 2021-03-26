@@ -33,6 +33,7 @@ const CalculateButton = ({ text, calculate }) => {
         let hoursDiff;
         // Mins?
         // Secs?
+        
         // If conditional to filter decimal using .join.split
         const value = (priceExpense / hourlyWage)
         // .toFixed() rounds to 2 significant figures
@@ -47,7 +48,7 @@ const CalculateButton = ({ text, calculate }) => {
 
     }
 
-    // edge cases for decimals! 
+    // edge cases for decimals
 
     const roundDays = (parameter) => {
         // If roundedSig > 24 
@@ -67,7 +68,7 @@ const CalculateButton = ({ text, calculate }) => {
 
     // need to filter the decimal points as well
 
-    // Round to significant figures!
+    // Round to significant figures
 
     return (
         // Note: ** Change this button prop to be **modular** and reusable for <CalculateButton> component

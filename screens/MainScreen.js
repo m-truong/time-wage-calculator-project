@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 })
 
 const MainScreen = ({ navigation, screen }) => {
-    // Tip: Continue *** Adding useState functionality! ***
+    // Tip: Continue *** Adding useState functionality ***
     // Tip: useState complex object 
     const [hourlyWage, setHourlyWage] = useState(0)
     const [priceExpense, setPriceExpense] = useState(0)

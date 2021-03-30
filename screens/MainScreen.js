@@ -54,15 +54,22 @@ const MainScreen = ({ navigation, screen }) => {
                 </TouchableOpacity>
                 <MainScreenRow
                     text={"Hourly Wage"}
-                    word={wageState} />
+                    word={wageState} 
+                    dummyText={"0.00"}
+                    keyboard={"numeric"}
+                    width={20} />
                 <MainScreenRow
                     text={"Price of Expense"}
-                    width={20}
-                    word={expenseState} />
+                    word={expenseState}
+                    dummyText={"0.00"}
+                    keyboard={"numeric"}
+                    width={20} />
                 <MainScreenRow
                     text={"Label"}
-                    width={20}
-                    word={labelState} />
+                    word={labelState} 
+                    dummyText={"New item"}
+                    keyboard={"default"}
+                    width={20} />
                 {/* Add diff Button component with onPress to pass down data; not navigate */}
                 <CalculateButton
                     text={"Calculate"}

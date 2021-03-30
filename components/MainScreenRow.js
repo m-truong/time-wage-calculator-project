@@ -9,7 +9,7 @@ import MainScreenLabel from './MainScreenLabel'
 const styles = StyleSheet.create({
     container: {
         flex: 3,
-        flexDirection: "row", 
+        flexDirection: "row",
         justifyContent: 'space-between',
         padding: 10,
     },
@@ -19,14 +19,20 @@ const styles = StyleSheet.create({
     },
 })
 
-const MainScreenRow = ({ text, width, word }) => {
+const MainScreenRow = ({ text, word, width, dummyText, keyboard }) => {
     return (
         // Tip: Both components need to be nested inside <Text> component to display inline
         <View style={styles.container}>
             {/* TODO: Having issues adding spacing between <Label> and <InputField>! */}
             <Text>
-                <MainScreenLabel text={text} word={word} />
-                <MainScreenInputField word={word} width={width} />
+                <MainScreenLabel
+                    text={text}
+                    word={word} />
+                <MainScreenInputField
+                    word={word}
+                    width={width}
+                    dummyText={dummyText}
+                    keyboard={keyboard} />
             </Text>
         </View>
     )

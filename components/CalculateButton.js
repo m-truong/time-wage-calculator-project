@@ -28,9 +28,9 @@ const CalculateButton = ({ text, calculate }) => {
     const [calculator, setCalculator] = calculatorState
 
     const handleCalculate = (blah) => {
-        let days;
-        let hoursDiffDec;
-        let hoursDiff;
+        let days = 0;
+        let hoursDiffDec = 0;
+        let hoursDiff = 0;
         // Mins?
         // Secs?
         
@@ -40,9 +40,23 @@ const CalculateButton = ({ text, calculate }) => {
         const roundedSig = value.toFixed(2)
         console.log(`The roundedSigFigs is ${roundedSig}`)
         // Complex calculator state to determine days
-        roundDays(roundedSig)
+        // roundDays(roundedSig)
 
+        // If roundedSig > 24 
+        if (roundedSig > 24) {
+            // take Difference 
+            days = Math.trunc(roundedSig/24)
+            console.log(`The number of days is ${days}`)
+            hoursDiffDec = (roundedSig/24) - days
+            console.log(`The number of hours remaining is ${hoursDiffDec}`)
+            // then multiple by 24hrs/day
+            hoursDiff = hoursDiffDec*24
+            hoursDiff = Math.trunc(hoursDiff)
+            console.log(`The number of hours remaining CONVERTED is ${hoursDiff}`)
+        }
+        
         setCalculator((prevState)=> {
+            // ** TODO: stateData for hours not appearing in console! 
             return { days: days, hours: hoursDiff, mins: 0, secs: 0 };
         })
 
@@ -63,7 +77,7 @@ const CalculateButton = ({ text, calculate }) => {
             hoursDiff = Math.trunc(hoursDiff)
             console.log(`The number of hours remaining CONVERTED is ${hoursDiff}`)
         }
-        return;
+        // return;
     }
 
     // need to filter the decimal points as well

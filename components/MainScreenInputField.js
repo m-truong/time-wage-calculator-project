@@ -44,7 +44,7 @@ const MainScreenInputField = ({ word, dummyText, keyboard, width }) => {
                 // ** TODO: React-Native keyboard would stay onFocus
                 // ** Not an issue with changing Parent-State 
                 // ** Must figure out why
-                // onChangeText={setState}
+                onChangeText={setState}
                 // value={state}
             ></TextInput>
         </View>

@@ -58,7 +58,7 @@ const CalculateButton = ({ text, calculate }) => {
             
         }
 
-        // Has to be under !
+        // Has to be under 24
         else if (roundedSigHours < 24) {
             // Catch if hours are over mins! 
             minsDiffDec = roundedSigHours - Math.trunc(roundedSigHours)
@@ -69,15 +69,11 @@ const CalculateButton = ({ text, calculate }) => {
             // Catches any hours not over 24! 
             hoursDiff = Math.trunc(roundedSigHours)
         }
-
         setCalculator((prevState) => {
             return { days: days, hours: hoursDiff, mins: mins };
         })
-
     }
-    // need to filter the decimal points as well
-    // Round to significant figures
-    
+
     return (
         // Note: ** Change this button prop to be **modular** and reusable for <CalculateButton> component
         <TouchableOpacity

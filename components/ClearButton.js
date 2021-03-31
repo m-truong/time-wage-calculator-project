@@ -29,15 +29,18 @@ const ClearButton = () => {
     const [label, setLabel] = labelState
     const [calculator, setCalculatorState] = calculatorState
 
+    // Continue TODO: ** Clear state!
     const clearStateHandler = () => {
-        
+        setHourlyWage(() => 0)
+        setPriceExpense(() => 0)
+        setLabel(() => "")
+        setCalculatorState(() => { return { days: 0, hours: 0, mins: 0 } })
     }
 
-    // Continue TODO: ** Clear state!
     return (
         <TouchableOpacity
             style={styles.btn}
-            // onPress={}
+            onPress={clearStateHandler}
         >
             <Text style={styles.btnText}>Clear</Text>
         </TouchableOpacity>

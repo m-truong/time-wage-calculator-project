@@ -33,7 +33,7 @@ const MainScreen = ({ navigation, screen }) => {
     const [hourlyWage, setHourlyWage] = useState(0)
     const [priceExpense, setPriceExpense] = useState(0)
     const [calculator, setCalculator] = useState({ days: 0, hours: 0, mins: 0 })
-    const [label, setLabel] = useState("New item")
+    const [label, setLabel] = useState("")
 
     const wageState = [hourlyWage, setHourlyWage]
     const expenseState = [priceExpense, setPriceExpense]

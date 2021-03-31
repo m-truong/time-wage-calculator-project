@@ -43,7 +43,9 @@ const MainScreenInputField = ({ word, dummyText, keyboard, width }) => {
                 // ** Not an issue with changing Parent-State 
                 // ** Must figure out why
                 onChangeText={setState}
-                // value={state}
+                // ** Successfully clears state
+                value={state}
+                clearButtonMode="always"
             ></TextInput>
         </View>
     )

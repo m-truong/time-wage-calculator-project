@@ -31,7 +31,7 @@ const MainScreen = ({ navigation, screen }) => {
     // Tip: useState complex object 
     const [hourlyWage, setHourlyWage] = useState(0)
     const [priceExpense, setPriceExpense] = useState(0)
-    const [calculator, setCalculator] = useState({ days: 0, hours: 0, mins: 0, secs: 0 })
+    const [calculator, setCalculator] = useState({ days: 0, hours: 0, mins: 0})
     const [label, setLabel] = useState("New item")
 
     const wageState = [hourlyWage, setHourlyWage]
@@ -54,15 +54,22 @@ const MainScreen = ({ navigation, screen }) => {
                 </TouchableOpacity>
                 <MainScreenRow
                     text={"Hourly Wage"}
-                    word={wageState} />
+                    word={wageState} 
+                    dummyText={"0.00"}
+                    keyboard={"numeric"}
+                    width={20} />
                 <MainScreenRow
                     text={"Price of Expense"}
-                    width={20}
-                    word={expenseState} />
+                    word={expenseState}
+                    dummyText={"0.00"}
+                    keyboard={"numeric"}
+                    width={20} />
                 <MainScreenRow
                     text={"Label"}
-                    width={20}
-                    word={labelState} />
+                    word={labelState} 
+                    dummyText={"New item"}
+                    keyboard={"default"}
+                    width={20} />
                 {/* Add diff Button component with onPress to pass down data; not navigate */}
                 <CalculateButton
                     text={"Calculate"}

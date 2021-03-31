@@ -35,12 +35,11 @@ const MainScreenCalculator = () => {
     // Peak into state to display 
     const { calculatorState } = useContext(CalculatorContext)
     const [calculator, setCalculator] = calculatorState
-    const { days, hours, mins, secs } = calculator
-    console.log(`Does this console.log ${days}`)
-    console.log(`Does this console.log ${hours}`)
-    console.log(`Does this console.log ${mins}`)
-    console.log(`Does this console.log ${secs}`)
-    // this is undefined 
+    const { days, hours, mins} = calculator
+    // console.log(`Does this console.log ${days}`)
+    // console.log(`Does this console.log ${hours}`)
+    // console.log(`Does this console.log ${mins}`)
+    // console.log(`Does this console.log ${secs}`)
     
     return (
         <View style={styles.container}>

@@ -31,7 +31,7 @@ const MainScreen = ({ navigation, screen }) => {
     // Tip: useState complex object 
     const [hourlyWage, setHourlyWage] = useState(0)
     const [priceExpense, setPriceExpense] = useState(0)
-    const [calculator, setCalculator] = useState({ days: 0, hours: 0, mins: 0, secs: 0 })
+    const [calculator, setCalculator] = useState({ days: 0, hours: 0, mins: 0})
     const [label, setLabel] = useState("New item")
 
     const wageState = [hourlyWage, setHourlyWage]

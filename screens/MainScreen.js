@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { CalculatorContext } from "../components/Context.js"
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
-import MainScreenRow from '../components/MainScreenRow';
-import MainScreenCalculator from '../components/MainScreenCalculator';
-import CalculateButton from '../components/CalculateButton';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
+import MainScreenRow from '../components/MainScreenRow'
+import MainScreenCalculator from '../components/MainScreenCalculator'
+import CalculateButton from '../components/CalculateButton'
+import { ClearButton as Clear } from '../components/ClearButton'
 
 const styles = StyleSheet.create({
     container: {
@@ -31,7 +32,7 @@ const MainScreen = ({ navigation, screen }) => {
     // Tip: useState complex object 
     const [hourlyWage, setHourlyWage] = useState(0)
     const [priceExpense, setPriceExpense] = useState(0)
-    const [calculator, setCalculator] = useState({ days: 0, hours: 0, mins: 0})
+    const [calculator, setCalculator] = useState({ days: 0, hours: 0, mins: 0 })
     const [label, setLabel] = useState("New item")
 
     const wageState = [hourlyWage, setHourlyWage]
@@ -54,7 +55,7 @@ const MainScreen = ({ navigation, screen }) => {
                 </TouchableOpacity>
                 <MainScreenRow
                     text={"Hourly Wage"}
-                    word={wageState} 
+                    word={wageState}
                     dummyText={"0.00"}
                     keyboard={"numeric"}
                     width={20} />
@@ -66,7 +67,7 @@ const MainScreen = ({ navigation, screen }) => {
                     width={20} />
                 <MainScreenRow
                     text={"Label"}
-                    word={labelState} 
+                    word={labelState}
                     dummyText={"New item"}
                     keyboard={"default"}
                     width={20} />
@@ -74,11 +75,11 @@ const MainScreen = ({ navigation, screen }) => {
                 <CalculateButton
                     text={"Calculate"}
                     word={calculatorState} />
-                <Text
+                <ClearButton
                     style={{ alignSelf: 'flex-end' }}
                 >
                     Clear
-                </Text>
+                </ClearButton>
                 <Text style={styles.text}>
                     {labelState} costs
             </Text>

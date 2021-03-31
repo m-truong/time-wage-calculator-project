@@ -22,10 +22,11 @@ const styles = StyleSheet.create({
 })
 
 const ClearButton = () => {
+    const { calculatorState } = useContext(CalculatorContext)
     return (
-        <View>
+        <TouchableOpacity >
             
-        </View>
+        </TouchableOpacity>
     )
 }
 

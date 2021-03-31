@@ -23,10 +23,22 @@ const styles = StyleSheet.create({
 })
 
 const ClearButton = () => {
-    const { calculatorState } = useContext(CalculatorContext)
+    const { wageState, expenseState, labelState, calculatorState } = useContext(CalculatorContext)
+    const [hourlyWage, setHourlyWage] = wageState
+    const [priceExpense, setPriceExpense] = expenseState
+    const [label, setLabel] = labelState
+    const [calculator, setCalculatorState] = calculatorState
+
+    const clearStateHandler = () => {
+        
+    }
+
     // Continue TODO: ** Clear state!
     return (
-        <TouchableOpacity style={styles.btn}>
+        <TouchableOpacity
+            style={styles.btn}
+            // onPress={}
+        >
             <Text style={styles.btnText}>Clear</Text>
         </TouchableOpacity>
     )

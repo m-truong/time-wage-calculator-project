@@ -48,11 +48,12 @@ const MainScreen = ({ navigation, screen }) => {
             calculatorState: calculatorState
         }}>
             <View style={styles.container}>
-                {/* <TouchableOpacity>
+                <TouchableOpacity 
+                onPress={() => { navigation.navigate("WelcomeScreen") }}>
                     <Image
                         style={{ marginLeft: 330 }}
                         source={require('../res/images/informationCircle.png')} />
-                </TouchableOpacity> */}
+                </TouchableOpacity>
                 <MainScreenRow
                     text={"Hourly Wage"}
                     word={wageState}

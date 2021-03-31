@@ -28,8 +28,6 @@ const styles = StyleSheet.create({
 const MainScreenInputField = ({ word, dummyText, keyboard, width }) => {
     const [state, setState] = word;
     const [temp, setTemp] = useState('');
-    // Debug:
-    // console.log(`this console logs the MainScreenInputField state ${state}`)
 
     return (
         <View style={styles.container}>

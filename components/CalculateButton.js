@@ -27,7 +27,7 @@ const CalculateButton = ({ text, calculate }) => {
     const [priceExpense, setPriceExpense] = expenseState
     const [calculator, setCalculator] = calculatorState
 
-    const handleCalculate = (blah) => {
+    const handleCalculate = () => {
         let days = 0;
         let hoursDiffDec = 0;
         let hoursDiff = 0;
@@ -38,7 +38,6 @@ const CalculateButton = ({ text, calculate }) => {
         const hoursToEarn = (priceExpense / hourlyWage)
         // .toFixed() rounds to 2 significant figures
         const roundedSigHours = hoursToEarn.toFixed(2)
-        // console.log(`The roundedSigFigs is ${roundedSigHours}`)
         // Complex calculator state to determine days
         // roundDays(roundedSigHours)
 
@@ -46,9 +45,8 @@ const CalculateButton = ({ text, calculate }) => {
         if (roundedSigHours > 24) {
             // take Difference 
             days = Math.trunc(roundedSigHours / 24)
-            // console.log(`The number of days is ${days}`)
+
             hoursDiffDec = (roundedSigHours / 24) - days
-            // console.log(`The number of hours remaining is ${hoursDiffDec}`)
             // then multiple by 24hrs/day
             hoursDiff = hoursDiffDec * 24
             // subtracting gives mins** 
@@ -59,7 +57,7 @@ const CalculateButton = ({ text, calculate }) => {
             mins = Math.trunc(mins)
             // Truncate the hours
             hoursDiff = Math.trunc(hoursDiff)
-            // console.log(`The number of hours remaining CONVERTED is ${hoursDiff}`)
+            
         }
 
         // Has to be UNDER 24!
@@ -69,7 +67,6 @@ const CalculateButton = ({ text, calculate }) => {
             // convert into 60mins/hr
             mins = minsDiffDec * 60
             // Truncate the mins 
-            // console.log(`This prints the truncated ${mins} to ${Math.trunc(mins)}`)
             mins = Math.trunc(mins)
             // Catches any hours not over 24! 
             hoursDiff = Math.trunc(roundedSigHours)
@@ -81,8 +78,7 @@ const CalculateButton = ({ text, calculate }) => {
 
     }
 
-    // edge cases for decimals
-
+    // edge cases for decimals 
     const roundDays = (parameter) => {
         // If roundedSigHours > 24 
         if (parameter > 24) {

@@ -19,10 +19,13 @@ const styles = StyleSheet.create({
 })
 
 // Must pass down as props
-const PageLink = ({text, navigation}) => {
+const PageLink = ({ text, navigation, screen }) => {
     return (
         <View>
-            <TouchableOpacity style={styles.position} >
+            <TouchableOpacity
+                style={styles.position}
+                onPress={() => { navigation.navigate("MainScreen") }}
+            >
                 <Text style={styles.text}>
                     {text}
                 </Text>

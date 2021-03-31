@@ -4,7 +4,7 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import MainScreenRow from '../components/MainScreenRow'
 import MainScreenCalculator from '../components/MainScreenCalculator'
 import CalculateButton from '../components/CalculateButton'
-import { ClearButton as Clear } from '../components/ClearButton'
+import Clear from '../components/ClearButton'
 
 const styles = StyleSheet.create({
     container: {
@@ -75,11 +75,7 @@ const MainScreen = ({ navigation, screen }) => {
                 <CalculateButton
                     text={"Calculate"}
                     word={calculatorState} />
-                <ClearButton
-                    style={{ alignSelf: 'flex-end' }}
-                >
-                    Clear
-                </ClearButton>
+                <Clear />
                 <Text style={styles.text}>
                     {labelState} costs
             </Text>

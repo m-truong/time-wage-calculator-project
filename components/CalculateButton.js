@@ -58,7 +58,7 @@ const CalculateButton = ({ text, calculate }) => {
             
         }
 
-        // Has to be UNDER 24!
+        // Has to be under !
         else if (roundedSigHours < 24) {
             // Catch if hours are over mins! 
             minsDiffDec = roundedSigHours - Math.trunc(roundedSigHours)

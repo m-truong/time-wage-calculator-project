@@ -34,7 +34,7 @@ const App = () => {
         <Stack.Screen
           name="WelcomeScreen"
           component={WelcomeScreen}
-          options={{ title: 'Time Wage Calculator - Welcome Screen' }} />
+          options={{ title: 'FightFor$15 - Wage Conversion Calculator' }} />
         <Stack.Screen
           name="InfoScreen"
           component={InfoScreen}

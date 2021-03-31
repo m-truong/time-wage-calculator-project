@@ -38,8 +38,6 @@ const CalculateButton = ({ text, calculate }) => {
         const hoursToEarn = (priceExpense / hourlyWage)
         // .toFixed() rounds to 2 significant figures
         const roundedSigHours = hoursToEarn.toFixed(2)
-        // Complex calculator state to determine days
-        // roundDays(roundedSigHours)
 
         // If roundedSigHours > 24 // ** Only executes if hours over 24
         if (roundedSigHours > 24) {
@@ -77,28 +75,9 @@ const CalculateButton = ({ text, calculate }) => {
         })
 
     }
-
-    // edge cases for decimals 
-    const roundDays = (parameter) => {
-        // If roundedSigHours > 24 
-        if (parameter > 24) {
-            // take Difference 
-            days = Math.trunc(parameter / 24)
-            console.log(`The number of days is ${days}`)
-            hoursDiffDec = (parameter / 24) - days
-            console.log(`The number of hours remaining is ${hoursDiffDec}`)
-            // then multiple by 24hrs/day
-            hoursDiff = hoursDiffDec * 24
-            hoursDiff = Math.trunc(hoursDiff)
-            console.log(`The number of hours remaining CONVERTED is ${hoursDiff}`)
-        }
-        // return;
-    }
-
     // need to filter the decimal points as well
-
     // Round to significant figures
-
+    
     return (
         // Note: ** Change this button prop to be **modular** and reusable for <CalculateButton> component
         <TouchableOpacity

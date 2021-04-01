@@ -6,8 +6,7 @@ const styles = StyleSheet.create({
         alignSelf: 'flex-start',
     },  
     text: {
-        marginRight: 10,
-        textAlign: 'left',
+        marginRight: 15,
         fontSize: 19,
         fontFamily: 'Helvetica',
         color: 'black',

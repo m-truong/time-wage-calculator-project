@@ -1,7 +1,6 @@
 /* TODO: Having issues adding spacing between <Label> and <InputField>! */
 
 import React from 'react'
-import { CalculatorContext } from "./Context.js";
 import { View, Text, StyleSheet } from 'react-native';
 import MainScreenInputField from './MainScreenInputField'
 import MainScreenLabel from './MainScreenLabel'
@@ -9,9 +8,10 @@ import MainScreenLabel from './MainScreenLabel'
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        flexDirection: "row",
-        justifyContent: 'space-between',
-        padding: 10,
+        alignSelf: 'flex-start',
+        // alignItems: 'baseline',
+        padding: 5,
+        marginLeft: 20,
     },
     text: {
         color: 'black',

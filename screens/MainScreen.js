@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
         flex: 1,
         margin: 10,
         backgroundColor: '#fff',
-        // justifyContent: 'space-between',
+        // justifyContent: 'space-evenly',
         alignItems: 'center',
         marginBottom: 40,
     },
@@ -79,7 +79,7 @@ const MainScreen = ({ navigation, screen }) => {
                     word={calculatorState} />
                 <Clear />
                 <Text style={styles.text}>
-                    {labelState} costs
+                    {label} costs
                 </Text>
                 <MainScreenCalculator />
                 <Text style={styles.text}>

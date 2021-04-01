@@ -1,36 +1,28 @@
-import React, { useState, useContext } from 'react'
-import { CalculatorContext } from "./Context.js";
-import { View, StyleSheet, Text, TextInput } from 'react-native';
+import React from 'react'
+import { View, StyleSheet, TextInput } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#E2CFE9',
-        paddingHorizontal: 10,
-        width: 120,
-        height: 40,
     },
     text: {
         // Tip: Need '100%' width to expand inputField to container 
+        backgroundColor: '#E2CFE9',
         width: '100%',
         height: '100%',
         color: 'black',
         fontFamily: 'Courier New',
         fontSize: 16,
+        // marginLeft: 120,
+        paddingHorizontal: 10,
+        width: 120,
+        height: 40,
+        alignSelf: 'flex-end',
     },
-    // dollarSize: {
-    //     fontSize: 18,
-    //     paddingRight: 8,
-    //     paddingBottom: 6,
-    // }
 })
 
 const MainScreenInputField = ({ word, dummyText, keyboard, width }) => {
     const [state, setState] = word;
-    // const [temp, setTemp] = useState('');
-
     return (
-        // <View>
-        //     <Text style={styles.dollarSize}> $
         <View style={styles.container}>
             <TextInput
                 style={styles.text}
@@ -49,8 +41,6 @@ const MainScreenInputField = ({ word, dummyText, keyboard, width }) => {
                 value={state}
             />
         </View>
-        //     </Text>
-        // </View>
     )
 }
 

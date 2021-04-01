@@ -1,8 +1,8 @@
-# FightFor$15 - TimeWageCalculator
+# Time Wager Mobile App
 
 ---
 
-![FightFor15](https://res.cloudinary.com/mtruong/image/upload/v1616773643/FightFor15_TimeWageCalc_MobileApp_upcfeh.png)
+![Time Wager Mobile App](https://res.cloudinary.com/mtruong/image/upload/v1616773643/FightFor15_TimeWageCalc_MobileApp_upcfeh.png)
 
 ---
 

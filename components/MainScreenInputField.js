@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
         // Tip: Need '100%' width to expand inputField to container 
         backgroundColor: '#E2CFE9',
         width: '100%',
-        height: '100%',
         color: 'black',
         fontFamily: 'Courier New',
         fontSize: 16,

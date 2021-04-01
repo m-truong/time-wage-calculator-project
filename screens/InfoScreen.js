@@ -23,7 +23,6 @@ const InfoScreen = ({ navigation }) => {
         <View style={styles.container}>
             <PageLink
                 text={"Skip Intro"}
-                // Note: Must pass down {navigation} as a prop to the <TouchableOpacity> component to change screens
                 navigation={navigation}
             />
             <Image

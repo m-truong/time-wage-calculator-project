@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#8908B6',
         borderRadius: 12,
         padding: 9,
-        margin: 5,
+        marginRight: 23,
         width: 125,
         height: 40,
         // Tip: Use alignSelf
@@ -27,7 +27,7 @@ const CalculateButton = ({ text, calculate }) => {
     const [priceExpense, setPriceExpense] = expenseState
     const [calculator, setCalculator] = calculatorState
 
-    const handleCalculate = (blah) => {
+    const handleCalculate = () => {
         let days = 0;
         let hoursDiffDec = 0;
         let hoursDiff = 0;
@@ -38,17 +38,13 @@ const CalculateButton = ({ text, calculate }) => {
         const hoursToEarn = (priceExpense / hourlyWage)
         // .toFixed() rounds to 2 significant figures
         const roundedSigHours = hoursToEarn.toFixed(2)
-        // console.log(`The roundedSigFigs is ${roundedSigHours}`)
-        // Complex calculator state to determine days
-        // roundDays(roundedSigHours)
 
         // If roundedSigHours > 24 // ** Only executes if hours over 24
         if (roundedSigHours > 24) {
             // take Difference 
             days = Math.trunc(roundedSigHours / 24)
-            // console.log(`The number of days is ${days}`)
+
             hoursDiffDec = (roundedSigHours / 24) - days
-            // console.log(`The number of hours remaining is ${hoursDiffDec}`)
             // then multiple by 24hrs/day
             hoursDiff = hoursDiffDec * 24
             // subtracting gives mins** 
@@ -59,49 +55,24 @@ const CalculateButton = ({ text, calculate }) => {
             mins = Math.trunc(mins)
             // Truncate the hours
             hoursDiff = Math.trunc(hoursDiff)
-            // console.log(`The number of hours remaining CONVERTED is ${hoursDiff}`)
+            
         }
 
-        // Has to be UNDER 24!
+        // Has to be under 24
         else if (roundedSigHours < 24) {
             // Catch if hours are over mins! 
             minsDiffDec = roundedSigHours - Math.trunc(roundedSigHours)
             // convert into 60mins/hr
             mins = minsDiffDec * 60
             // Truncate the mins 
-            // console.log(`This prints the truncated ${mins} to ${Math.trunc(mins)}`)
             mins = Math.trunc(mins)
             // Catches any hours not over 24! 
             hoursDiff = Math.trunc(roundedSigHours)
         }
-
         setCalculator((prevState) => {
             return { days: days, hours: hoursDiff, mins: mins };
         })
-
     }
-
-    // edge cases for decimals
-
-    const roundDays = (parameter) => {
-        // If roundedSigHours > 24 
-        if (parameter > 24) {
-            // take Difference 
-            days = Math.trunc(parameter / 24)
-            console.log(`The number of days is ${days}`)
-            hoursDiffDec = (parameter / 24) - days
-            console.log(`The number of hours remaining is ${hoursDiffDec}`)
-            // then multiple by 24hrs/day
-            hoursDiff = hoursDiffDec * 24
-            hoursDiff = Math.trunc(hoursDiff)
-            console.log(`The number of hours remaining CONVERTED is ${hoursDiff}`)
-        }
-        // return;
-    }
-
-    // need to filter the decimal points as well
-
-    // Round to significant figures
 
     return (
         // Note: ** Change this button prop to be **modular** and reusable for <CalculateButton> component

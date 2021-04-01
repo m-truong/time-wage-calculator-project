@@ -35,6 +35,7 @@ const WelcomeScreen = ({ navigation }) => {
                 text={"Skip Intro"}
                 // Note: Must pass down {navigation} as a prop to the <TouchableOpacity> component to change screens
                 navigation={navigation}
+                // screen={"MainScreen"}
             />
             <WelcomeScreenBubble
                 text={text.text1}

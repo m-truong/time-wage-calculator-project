@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
 import { CalculatorContext } from "../components/Context.js"
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
-import MainScreenRow from '../components/MainScreenRow';
-import MainScreenCalculator from '../components/MainScreenCalculator';
-import CalculateButton from '../components/CalculateButton';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
+import MainScreenRow from '../components/MainScreenRow'
+import MainScreenCalculator from '../components/MainScreenCalculator'
+import CalculateButton from '../components/CalculateButton'
+import Clear from '../components/ClearButton'
+import Line from '../components/HorizontalRule'
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         margin: 10,
         backgroundColor: '#fff',
-        justifyContent: 'space-between',
+        // justifyContent: 'space-evenly',
         alignItems: 'center',
         marginBottom: 40,
     },
@@ -27,12 +29,10 @@ const styles = StyleSheet.create({
 })
 
 const MainScreen = ({ navigation, screen }) => {
-    // Tip: Continue *** Adding useState functionality ***
-    // Tip: useState complex object 
     const [hourlyWage, setHourlyWage] = useState(0)
     const [priceExpense, setPriceExpense] = useState(0)
-    const [calculator, setCalculator] = useState({ days: 0, hours: 0, mins: 0})
-    const [label, setLabel] = useState("New item")
+    const [calculator, setCalculator] = useState({ days: 0, hours: 0, mins: 0 })
+    const [label, setLabel] = useState("")
 
     const wageState = [hourlyWage, setHourlyWage]
     const expenseState = [priceExpense, setPriceExpense]
@@ -47,41 +47,40 @@ const MainScreen = ({ navigation, screen }) => {
             calculatorState: calculatorState
         }}>
             <View style={styles.container}>
-                <TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => { navigation.navigate("WelcomeScreen") }}>
                     <Image
                         style={{ marginLeft: 330 }}
                         source={require('../res/images/informationCircle.png')} />
                 </TouchableOpacity>
                 <MainScreenRow
                     text={"Hourly Wage"}
-                    word={wageState} 
-                    dummyText={"0.00"}
+                    word={wageState}
+                    dummyText={"$ 0.00"}
                     keyboard={"numeric"}
                     width={20} />
+                <Line />
                 <MainScreenRow
                     text={"Price of Expense"}
                     word={expenseState}
-                    dummyText={"0.00"}
+                    dummyText={"$ 0.00"}
                     keyboard={"numeric"}
                     width={20} />
+                <Line />
                 <MainScreenRow
                     text={"Label"}
-                    word={labelState} 
+                    word={labelState}
                     dummyText={"New item"}
                     keyboard={"default"}
                     width={20} />
-                {/* Add diff Button component with onPress to pass down data; not navigate */}
+                <Line />
                 <CalculateButton
                     text={"Calculate"}
                     word={calculatorState} />
-                <Text
-                    style={{ alignSelf: 'flex-end' }}
-                >
-                    Clear
-                </Text>
+                <Clear />
                 <Text style={styles.text}>
-                    {labelState} costs
-            </Text>
+                    {label} costs
+                </Text>
                 <MainScreenCalculator />
                 <Text style={styles.text}>
                     of your life to earn.

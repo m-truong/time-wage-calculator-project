@@ -4,12 +4,8 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 
 const styles = StyleSheet.create({
     btn: {
-        // backgroundColor: '#8908B6',
-        // borderRadius: 12,
         padding: 9,
-        // margin: 5,
-        // width: 12,
-        // height: 12,
+        marginRight: 15,
         // Tip: Use alignSelf
         alignSelf: 'flex-end',
     },

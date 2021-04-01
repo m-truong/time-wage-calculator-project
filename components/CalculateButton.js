@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#8908B6',
         borderRadius: 12,
         padding: 9,
-        margin: 5,
+        marginRight: 23,
         width: 125,
         height: 40,
         // Tip: Use alignSelf

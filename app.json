@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Time Wager App",
-    "icon": "./images/TimeWagerAppIcon.png",
+    "icon": "./res/images/TimeWagerAppIcon.png",
     "description": "A time wage coversion calculator app.",
     "sdkVersion": "38.0.0",
     "version": "1.0.0",

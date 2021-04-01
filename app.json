@@ -1,4 +1,16 @@
 {
-  "name": "time_wage_calculator_project",
-  "displayName": "time_wage_calculator_project"
+  "expo": {
+    "name": "Time Wager App",
+    "icon": "./images/TimeWagerAppIcon.png",
+    "description": "A time wage coversion calculator app.",
+    "sdkVersion": "XX.0.0",
+    "version": "1.0.0",
+    "slug": "app-slug",
+    "ios": {
+      "bundleIdentifier": "com.mtruong.timewagerapp"
+    },
+    "android": {
+      "package": "com.mtruong.timewagerapp"
+    }
+  }
 }

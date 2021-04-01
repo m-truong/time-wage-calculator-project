@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
         flex: 1,
         margin: 10,
         backgroundColor: '#fff',
-        justifyContent: 'space-between',
+        // justifyContent: 'space-between',
         alignItems: 'center',
         marginBottom: 40,
     },
@@ -56,14 +56,14 @@ const MainScreen = ({ navigation, screen }) => {
                 <MainScreenRow
                     text={"Hourly Wage"}
                     word={wageState}
-                    dummyText={"0.00"}
+                    dummyText={"$ 0.00"}
                     keyboard={"numeric"}
                     width={20} />
                 <Line />
                 <MainScreenRow
                     text={"Price of Expense"}
                     word={expenseState}
-                    dummyText={"0.00"}
+                    dummyText={"$ 0.00"}
                     keyboard={"numeric"}
                     width={20} />
                 <Line />

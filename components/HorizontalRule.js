@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
         width: 150,
         marginLeft: 28,
         borderColor: 'black',
-        borderWidth: 1,
+        borderWidth: 0.5,
         alignSelf: 'stretch',
     }
 })

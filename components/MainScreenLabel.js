@@ -2,19 +2,22 @@ import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
+    container: {
+        alignSelf: 'flex-start',
+    },  
     text: {
+        marginRight: 10,
+        textAlign: 'left',
+        fontSize: 19,
         fontFamily: 'Helvetica',
         color: 'black',
-        fontSize: 19,
-        marginRight: 110,
-        // paddingRight: 100,
     },
 })
 
 const MainScreenLabel = ({ text }) => {
     return (
         // ** Fix was to wrap it in a <View> Container!
-        <View>
+        <View style={styles.container}>
             <Text style={styles.text}>
                 {text}
             </Text>

@@ -8,11 +8,10 @@ import MainScreenLabel from './MainScreenLabel'
 
 const styles = StyleSheet.create({
     container: {
-        flex: 4,
+        flex: 1,
         flexDirection: "row",
         justifyContent: 'space-between',
         padding: 10,
-        // margin: 2,
     },
     text: {
         color: 'black',

@@ -5,6 +5,7 @@ import MainScreenRow from '../components/MainScreenRow'
 import MainScreenCalculator from '../components/MainScreenCalculator'
 import CalculateButton from '../components/CalculateButton'
 import Clear from '../components/ClearButton'
+import Line from '../components/HorizontalRule'
 
 const styles = StyleSheet.create({
     container: {
@@ -58,18 +59,21 @@ const MainScreen = ({ navigation, screen }) => {
                     dummyText={"0.00"}
                     keyboard={"numeric"}
                     width={20} />
+                <Line />
                 <MainScreenRow
                     text={"Price of Expense"}
                     word={expenseState}
                     dummyText={"0.00"}
                     keyboard={"numeric"}
                     width={20} />
+                <Line />
                 <MainScreenRow
                     text={"Label"}
                     word={labelState}
                     dummyText={"New item"}
                     keyboard={"default"}
                     width={20} />
+                <Line />
                 <CalculateButton
                     text={"Calculate"}
                     word={calculatorState} />

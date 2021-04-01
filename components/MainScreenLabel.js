@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Helvetica',
         color: 'black',
         fontSize: 19,
-        marginRight: 105,
+        marginRight: 110,
         // paddingRight: 100,
     },
 })

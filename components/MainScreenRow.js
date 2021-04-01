@@ -8,7 +8,7 @@ import MainScreenLabel from './MainScreenLabel'
 
 const styles = StyleSheet.create({
     container: {
-        flex: 3,
+        flex: 4,
         flexDirection: "row",
         justifyContent: 'space-between',
         padding: 10,

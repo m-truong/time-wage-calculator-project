@@ -3,9 +3,9 @@
     "name": "Time Wager App",
     "icon": "./images/TimeWagerAppIcon.png",
     "description": "A time wage coversion calculator app.",
-    "sdkVersion": "XX.0.0",
+    "sdkVersion": "38.0.0",
     "version": "1.0.0",
-    "slug": "app-slug",
+    "slug": "time-wager-app",
     "ios": {
       "bundleIdentifier": "com.mtruong.timewagerapp"
     },

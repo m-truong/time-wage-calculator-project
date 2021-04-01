@@ -5,20 +5,20 @@ import { View, StyleSheet, TextInput } from 'react-native';
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#E2CFE9',
-        lineHeight: 23,
+        paddingHorizontal: 5,
         justifyContent: 'center',
         alignItems: 'center',
-        paddingHorizontal: 5,
         textAlign: 'center',
         width: 120,
         height: 40,
+        lineHeight: 23,
     },
     text: {
         // Tip: Need '100%' width to expand inputField to container 
         width: '100%',
         height: '100%',
-        borderWidth: 1,
-        borderColor: 'rgba(0,0,0,0.5)',
+        borderWidth: 2,
+        borderColor: 'black',
         color: 'black',
         fontFamily: 'Courier New',
         fontSize: 16,
@@ -36,16 +36,16 @@ const MainScreenInputField = ({ word, dummyText, keyboard, width }) => {
                 placeholder={dummyText}
                 placeholderTextColor="black"
                 autoCompleteType='off'
-                autoCorrect='false'
+                autoCorrect={false}
                 keyboardType={keyboard}
                 autoFocus={true}
+                clearButtonMode="always"
                 // ** TODO: React-Native keyboard would stay onFocus
                 // ** Not an issue with changing Parent-State 
                 // ** Must figure out why
                 onChangeText={setState}
                 // ** Successfully clears state
                 value={state}
-                clearButtonMode="always"
             ></TextInput>
         </View>
     )

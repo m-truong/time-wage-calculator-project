@@ -29,7 +29,6 @@ const ClearButton = () => {
     const [label, setLabel] = labelState
     const [calculator, setCalculatorState] = calculatorState
 
-    // Continue TODO: ** Clear state!
     const clearStateHandler = () => {
         setHourlyWage(() => 0)
         setPriceExpense(() => 0)

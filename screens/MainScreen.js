@@ -28,8 +28,6 @@ const styles = StyleSheet.create({
 })
 
 const MainScreen = ({ navigation, screen }) => {
-    // Tip: Continue *** Adding useState functionality ***
-    // Tip: useState complex object 
     const [hourlyWage, setHourlyWage] = useState(0)
     const [priceExpense, setPriceExpense] = useState(0)
     const [calculator, setCalculator] = useState({ days: 0, hours: 0, mins: 0 })
@@ -48,8 +46,8 @@ const MainScreen = ({ navigation, screen }) => {
             calculatorState: calculatorState
         }}>
             <View style={styles.container}>
-                <TouchableOpacity 
-                onPress={() => { navigation.navigate("WelcomeScreen") }}>
+                <TouchableOpacity
+                    onPress={() => { navigation.navigate("WelcomeScreen") }}>
                     <Image
                         style={{ marginLeft: 330 }}
                         source={require('../res/images/informationCircle.png')} />
@@ -72,14 +70,13 @@ const MainScreen = ({ navigation, screen }) => {
                     dummyText={"New item"}
                     keyboard={"default"}
                     width={20} />
-                {/* Add diff Button component with onPress to pass down data; not navigate */}
                 <CalculateButton
                     text={"Calculate"}
                     word={calculatorState} />
                 <Clear />
                 <Text style={styles.text}>
                     {labelState} costs
-            </Text>
+                </Text>
                 <MainScreenCalculator />
                 <Text style={styles.text}>
                     of your life to earn.

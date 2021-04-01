@@ -1,21 +1,26 @@
 import React from 'react'
-import { CalculatorContext } from "./Context.js"
-import { Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
+    container: {
+        alignSelf: 'flex-start',
+    },  
     text: {
+        marginRight: 15,
+        fontSize: 19,
         fontFamily: 'Helvetica',
         color: 'black',
-        fontSize: 19,
-        paddingRight: 10,
     },
 })
 
 const MainScreenLabel = ({ text }) => {
     return (
+        // ** Fix was to wrap it in a <View> Container!
+        <View style={styles.container}>
             <Text style={styles.text}>
                 {text}
             </Text>
+        </View>
     )
 }
 

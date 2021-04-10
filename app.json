@@ -1,4 +1,6 @@
 {
+  "name": "time_wage_calculator_project",
+  "displayName": "Time Wager App",
   "expo": {
     "name": "Time Wager App",
     "icon": "./res/images/TimeWagerAppIcon.png",
